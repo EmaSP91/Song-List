@@ -9,17 +9,18 @@ let songList=[];
 
 let howto=document.querySelector(".howto");
 let instructions= document.querySelector(".howto-instructions");
+let body = document.querySelector("body");
 
 howto.addEventListener("mouseover", displayInstructions);
 howto.addEventListener("mouseout", hideInstructions);
 
 function displayInstructions(){
- 
+  body.classList.add("display-body");
   instructions.style.transform="translateX(-270px)";
  
 } 
 function hideInstructions(){
-
+    body.classList.remove("display-body");
   instructions.style.transform = "translateX(270px)"
 }
 
