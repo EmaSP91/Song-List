@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>¿A quién le gusta?</title>
+</head>
+<body>
+     <nav>
+        <div class="navbar">
+       <div class="logo"> 
+      
+        <h2>¿A quién le gusta?</h2>
+       <div> <img class="question" src="img/undraw_Faq.png" alt=""></div>
+        </div>
+        
+            <h3 class="howto">Cómo Jugar</h3>
+            <div class="howto-instructions">
+               
+                <p>
+                     Agrega al menos 3 canciones a la lista.<br>
+                    Haz clic en "Canción aleatoria" para seleccionar una canción al azar.<br>
+                        Adivina quién agregó esa canción en base a los gustos musicales conocidos de los participantes.</br>
+                        Anota tus suposiciones en un papel.<br>
+                         Repite los pasos 2-4 hasta que se agoten todas las canciones.<br>
+                         Cuenta cuántas respuestas acertaste al final del juego.<br>
+                    
+                    <span>¡Diviértete descubriendo quién eligió cada canción!</span>
+                </p>
+            </div>
+
+        </div>
+
+     </nav>
+   <div class="fondo">
+    <img class="fondo-hoja1" src="img/greenleaf.png" alt="hoja verde">
+    <img class="fondo-hoja2" src="img/greenleaf.png" alt="hoja verde">
+    <img class="fondo-hoja3" src="img/greenleaf.png" alt="hoja verde">
+    <img class="fondo-hoja4" src="img/greenleaf.png" alt="hoja verde">
+    <img class="burbuja1" src="img/burbuja.png" alt="burbuja rosa">
+    <img class="burbuja2" src="img/burbuja.png" alt="burbuja rosa">
+    <img class="burbuja3" src="img/burbuja.png" alt="burbuja rosa">
+
+   </div>
+    <form action="" id="song-form">
+        <img class="music"src="img/undraw_happy_music.png" alt="">
+        <label for="song" class="title">Agrega una canción</label>
+        <input type="text" id="song">
+        <button type="submit" class="add">Agregar</button>
+        <button class="cancion-azar">Canción Aleatoria</button>
+        <p class="empty-list">No hay canciones en la lista</p>
+    </form>
+
+</body>
+<script src="logic.js"></script>
+</html>

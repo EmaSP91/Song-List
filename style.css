@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Elementos del fondo*/
+
+.fondo{
+    z-index:-1;
+}
+
+.fondo-hoja1, .fondo-hoja2, .fondo-hoja3,.fondo-hoja4, .burbuja1, .burbuja2, .burbuja3{
+    position: absolute;
+    width: 100px;
+    
+
+}
+
+.fondo-hoja1{
+    top: 15px;
+}
+
+.fondo-hoja2{
+    left: 20px;
+}
+
+.fondo-hoja3{
+    left: 100px;
+    bottom: 8px;
+}
+
+.fondo-hoja4{
+    right: 10%;
+
+}
+
+.burbuja1{
+    left:25%;
+
+}
+
+.burbuja2{
+    right: 25%;
+    top:10%;
+}
+
+.burbuja3{
+    bottom: 15%;
+    right: 10%;
+}
+
+
+
+/*Navbar*/
+
+nav{
+    position: fixed;
+    z-index: 2;
+    top:0;
+    width: 100%;
+    height: 100px;
+    background: rgba(178, 255, 229, 0.732);
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    height: 100px;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display:flex;
+}
+h2{
+    font-size: 1rem;
+    line-height: 100px;
+    color: #00BFA6;
+}
+
+.question{
+    width: 120px;
+   
+}
+
+.howto{
+    font-size: 0.9rem;
+    color: #00BFA6;
+    cursor: pointer;
+}
+
+.howto-instructions{
+    position:absolute;
+    right:-270px;
+    top:0;
+    z-index:2;
+    margin-top:100px;
+    padding: 5px;
+    transform: translateX(0);
+    width: 250px;
+    height: 230px;
+    background-color: rgba(178, 255, 229, 0.732);
+   transition:0.5s;
+   
+    
+}
+
+/*.howto-container:hover .howto-instructions{
+   transform: translateX(-270px);
+}*/
+/*Navbar*/
+/*
+.navbar{
+    position: relative;
+}
+nav{
+    display: flex;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    background: rgba(178, 255, 229, 0.732);
+    width: 100%;
+    height: 100px;
+}
+
+h1{
+    position: absolute;
+    font-size: 1rem;
+    line-height: 100px;
+    left: 2%;
+    color: #00BFA6;
+}
+h4{
+    font-size: 0.8rem;
+}
+.question{
+    position: absolute;
+    top: 10px;
+    left: 12%;
+    width: 120px;
+}
+/*Cómo jugar */
+.howto-instructions{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    transform: translateX(0);
+    width: 270px;
+    height: 250px;
+    background-color:rgba(178, 255, 229, 0.732); 
+}
+
+.howto-instructions p {
+   
+    color:rgb(4, 4, 9) ;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+
+
+/*.howto-container:hover .howto-instructions{
+    display: block;
+}*
+.howto{
+    right:2%;
+    line-height: 100px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #00BFA6;
+}*/
+/*Formulario*/
+
+
+#song-form{
+    background-color: rgb(178, 255, 229);
+    border-radius: 10px;
+    width: 300px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.music{
+   width: 100px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+#song{
+    color:rgb(238, 60, 93) ;
+}
+#song:focus{
+    outline:none;
+}
+#song, .add, .cancion-azar{
+    width: 60%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.add, .cancion-azar{
+    background-color: rgb(238, 60, 93);
+    cursor: pointer;
+}
+
+.title, #song,.add,.cancion-azar{
+    color: rgb(4, 4, 9);
+}
+
+#song-form #song, #song-form .title,#song-form .add, #song-form .cancion-azar{
+    margin:10px;
+}
+
+.add:hover, .cancion-azar:hover{
+    background-color: rgb(230, 25, 63);
+    transition: 1s;
+}
+
+.empty-list{
+    color:#201e1e;
+    display: none;
+    font-size: 0.7rem;
+}
+
+
+@media (max-width: 765px){
+    #song.form{
+        width: 90%;
+    }
+}
