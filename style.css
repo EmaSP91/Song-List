@@ -8,15 +8,21 @@
     
 }
 
+
+
 body{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/*------------*/
 
+
+/*------------*/
 
 
 /*Elementos del fondo*/
@@ -106,6 +112,12 @@ h2{
     cursor: pointer;
 }
 
+.toggle-box p{
+    font-size: 0.9rem;
+    color: #00BFA6;
+    font-weight: bold;
+}
+
 .howto-instructions{
     position:absolute;
     right:-270px;
@@ -141,10 +153,12 @@ h2{
 
 
 #song-form{
+    margin-top: 120px;
     background-color: rgb(178, 255, 229);
     border-radius: 10px;
+    padding: 15px;
     width: 300px;
-    height: 320px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,13 +175,11 @@ h2{
     font-weight: bold;
 }
 
-#song{
-    color:rgb(238, 60, 93) ;
-}
+
 #song:focus{
     outline:none;
 }
-#song, .add, .cancion-azar{
+#song, .add, .cancion-azar, .new-game{
     width: 60%;
     padding: 5px 10px;
     border-radius: 5px;
@@ -175,22 +187,22 @@ h2{
     font-size: 0.9rem;
 }
 
-.add, .cancion-azar{
+.add, .cancion-azar, .new-game{
     background-color: rgb(238, 60, 93);
     cursor: pointer;
 }
 
-.title, #song,.add,.cancion-azar{
+.title, #song,.add,.cancion-azar, .new-game{
     color: rgb(4, 4, 9);
 }
 
-#song-form #song, #song-form .title,#song-form .add, #song-form .cancion-azar{
+#song-form #song, #song-form .title,#song-form .add, #song-form .cancion-azar, #song-form .new-game{
     margin:10px;
 }
 
-.add:hover, .cancion-azar:hover{
+.add:hover, .cancion-azar:hover, .new-game:hover{
     background-color: rgb(230, 25, 63);
-    transition: 1s;
+    transition: .5s;
 }
 
 .empty-list{
@@ -198,6 +210,7 @@ h2{
     display: none;
     font-size: 0.7rem;
 }
+
 
 
 @media (max-width: 830px){
@@ -210,6 +223,7 @@ h2{
         position:absolute;
         left: 0;
         top:0;
+        z-index: 1;
         background-color: #00000061;
         transition: 0.5s;
     }

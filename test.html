@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buscar y mostrar video de YouTube</title>
+</head>
+<body>
+  <label for="searchTerm">Ingresa el término de búsqueda:</label>
+  <input type="text" id="searchTerm">
+  <button onclick="searchVideo()">Buscar video</button>
+
+  <script>
+    function searchVideo() {
+      const apiKey = 'AIzaSyAVaBHWD19qKYWHRrPm1L4wkOHT6bwZ2UQ';
+      const searchTerm = document.getElementById('searchTerm').value;
+      const url = `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(searchTerm)}&part=snippet&key=${apiKey}`;
+
+      // Realizar la solicitud HTTP a la API de YouTube
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          if (data.items && data.items.length > 0) {
+            const videoId = data.items[0].id.videoId;
+            if (videoId) {
+              // Mostrar el video utilizando window.open()
+              const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+              window.open(videoUrl);
+            } else {
+              alert('No se encontraron resultados.');
+            }
+          } else {
+            alert('No se encontraron resultados.');
+          }
+        })
+        .catch(error => {
+          console.error('Error al realizar la búsqueda:', error);
+        });
+    }
+  </script>
+</body>
+</html>

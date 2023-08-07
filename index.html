@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+   
+    <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="style.css">
+   
     <title>¿A quién le gusta?</title>
 </head>
 <body>
+    <div class="body-layer"></div>
      <nav>
         <div class="navbar">
        <div class="logo"> 
-      
+       
         <h2>¿A quién le gusta?</h2>
        <div> <img class="question" src="img/undraw_Faq.png" alt=""></div>
         </div>
+
+      <div class="toggle-box">
+        <p>Canciones</p>
+        <div class="toggle-container">
+            <div class="toggle-switch"></div>
+         </div>
+        <p>Peliculas/Series</p>
+
+      </div>
+      
         
             <h3 class="howto">Cómo Jugar</h3>
             <div class="howto-instructions">
@@ -49,9 +64,16 @@
         <input type="text" autocomplete="off" id="song">
         <button type="submit" class="add">Agregar</button>
         <button class="cancion-azar">Canción Aleatoria</button>
-        <p class="empty-list">No hay canciones en la lista</p>
+        <p class="empty-list">No hay nada en la lista</p>
+        
+        <button class="new-game">Nuevo juego</button>
     </form>
 
+   
+
+    <script src="toggle.js"></script>
+    <script src="logic.js"></script>
+ 
 </body>
-<script src="logic.js"></script>
+
 </html>

@@ -1,0 +1,86 @@
+
+ 
+  body.dark{
+    background:#252850 ;
+  }
+  body.dark nav {
+    background:#4b4fb95d;
+  }
+
+  body.dark h2{
+    color: rgb(251, 251, 251);
+  }
+
+  body.dark .howto-instructions {
+    background:#4b4fb999;
+  }
+  body.dark .howto{
+    color: rgb(251, 251, 251);
+  }
+  body.dark .howto-instructions p {
+    color: rgb(255, 255, 255);
+  }
+
+  body.dark #song-form{
+    background: #131225;
+  }
+
+  body.dark .add, body.dark .cancion-azar, body.dark .new-game{
+    background: #6C63FF;
+  }
+
+  body.dark .add:hover, body.dark .cancion-azar:hover, body.dark .new-game:hover{
+    background-color: #564eee;
+    transition: .5s;
+}
+
+body.dark .title{
+    color: rgb(255, 255, 255);
+}
+
+body.dark .toggle-switch{
+    background:#6C63FF ;
+}
+
+body.dark .toggle-container{
+    box-shadow: 2px 2px 5px #4b4fb9b5;
+}
+
+body.dark .toggle-box p{
+    color: rgb(255, 255, 255);
+}
+
+
+.toggle-box{
+    display:flex;
+    gap: 10px;
+}
+
+  .toggle-container{
+    position:relative;
+    background:white;
+    width:40px;
+    height:20px;
+    border-radius:45px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(32, 123, 93, 0.81);
+  }
+  
+  .toggle-switch{
+    position: absolute;
+    left:0;
+    top:0;
+    width:20px;
+    height:20px;
+    background:#00BFA6;
+    border-radius:50%;
+    transition: .5s;
+  }
+  
+  .toggle-switch.active{
+    transform:translateX(20px);
+  }
+  
+  body.dark h1{
+    color:white;
+  }

@@ -1,26 +1,29 @@
 const songForm = document.getElementById("song-form");
 const song = document.getElementById("song");
-
 const cancionAzar = document.querySelector(".cancion-azar");
+const newGame = document.querySelector(".new-game");
+
 
 const emptyList = document.querySelector(".empty-list");
+
 let songList=[];
 
 
 let howto=document.querySelector(".howto");
 let instructions= document.querySelector(".howto-instructions");
-let body = document.querySelector("body");
+let layer = document.querySelector(".body-layer");
 
+//Muestra y esconde las instrucciones
 howto.addEventListener("mouseover", displayInstructions);
 howto.addEventListener("mouseout", hideInstructions);
 
 function displayInstructions(){
-  body.classList.add("display-body");
+  layer.classList.add("display-body");
   instructions.style.transform="translateX(-270px)";
  
 } 
 function hideInstructions(){
-    body.classList.remove("display-body");
+    layer.classList.remove("display-body");
   instructions.style.transform = "translateX(270px)"
 }
 
@@ -30,6 +33,7 @@ songForm.addEventListener('submit', function(event){
     let chosenSong =  song.value
     if(song.value != ""){
     songList.push(chosenSong)
+    localStorage.setItem("Choices", songList.join(", "));
     }
     console.log(song.value)
     song.value= ""
@@ -38,10 +42,12 @@ songForm.addEventListener('submit', function(event){
 })
 cancionAzar.addEventListener('click', mostrarCancion);
 
-cancionAzar.addEventListener('click', mostrarCancion);
+
 
 function mostrarCancion(){
     if (songList.length != 0){
+
+  
   emptyList.style.display = "none";
   const randomIndex =  Math.floor(Math.random() * songList.length);
   console.log(randomIndex)
@@ -54,18 +60,17 @@ function mostrarCancion(){
   
   const url = `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(selectedSong)}&part=snippet&key=${apiKey}`;
 
-  // Realizar la solicitud HTTP a la API de YouTube
+  // Realiza la solicitud HTTP a la API de YouTube
   fetch(url)
     .then(response => response.json())
     .then(data => {
 
-      const startMinutes = 1; // Replace with the desired start minute
-      const startSeconds = 5; // Replace with the desired start second
+    
       if (data.items && data.items.length > 0) {
         const videoId = data.items[0].id.videoId;
         if (videoId) {
           
-          const videoUrl = `https://www.youtube.com/watch?v=${videoId}&t=${startMinutes}m${startSeconds}s`;
+          const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
           
            
         window.open(videoUrl);
@@ -82,13 +87,21 @@ function mostrarCancion(){
 
   //------
   
- /* window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(selectedSong)}`);*/
+ 
   songList.splice(randomIndex, 1)
 }else{
     emptyList.style.display = "block";
     console.log("No hay canciones en la lista")
 }}
 
+newGame.addEventListener('click', function(){
+  localStorage.clear();
+  songList = [];
+});
+
+/*--------*/
+
+/*---------*/ 
 
 /* var iframe = document.createElement('iframe');
             iframe.src = youtubeEmbedUrl;
