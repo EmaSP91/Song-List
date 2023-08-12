@@ -1,5 +1,41 @@
 
+ /*Switch from songs to movies/series game */
  
+.toggle-box{
+  display:flex;
+  gap: 10px;
+}
+
+.toggle-container{
+  position:relative;
+  background:white;
+  width:40px;
+  height:20px;
+  border-radius:25px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(32, 123, 93, 0.81);
+}
+
+.toggle-switch{
+  position: absolute;
+  left:0;
+  top:0;
+  width:20px;
+  height:20px;
+  background:#00BFA6;
+  border-radius:50%;
+  transition: .5s;
+
+}
+
+.toggle-switch.active{
+  transform:translateX(20px);
+}
+
+ 
+ 
+ /*Styles for the movies/series interface*/
+
   body.dark{
     background:#252850 ;
   }
@@ -17,12 +53,16 @@
   body.dark .howto{
     color: rgb(251, 251, 251);
   }
-  body.dark .howto-instructions p {
+  body.dark .howto-instructions ul li {
     color: rgb(255, 255, 255);
   }
 
   body.dark #form{
     background: #131225;
+  }
+
+  body.dark h1{
+    color:white;
   }
 
   body.dark .add, body.dark .random, body.dark .new-game{
@@ -46,9 +86,10 @@ body.dark .toggle-container{
     box-shadow: 2px 2px 5px #4b4fb9b5;
 }
 
-body.dark .toggle-box p{
+body.dark .empty-list{
     color: rgb(255, 255, 255);
 }
+
 
 .fa-music, .fa-film{
   font-size: 1.5rem;
@@ -59,37 +100,5 @@ body.dark .toggle-box p{
     width: 100px;
     opacity: 0.7;
 }
-.toggle-box{
-    display:flex;
-    gap: 10px;
-}
 
-  .toggle-container{
-    position:relative;
-    background:white;
-    width:40px;
-    height:20px;
-    border-radius:25px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(32, 123, 93, 0.81);
-  }
-  
-  .toggle-switch{
-    position: absolute;
-    left:0;
-    top:0;
-    width:20px;
-    height:20px;
-    background:#00BFA6;
-    border-radius:50%;
-    transition: .5s;
-
-  }
-  
-  .toggle-switch.active{
-    transform:translateX(20px);
-  }
-  
-  body.dark h1{
-    color:white;
-  }
+/*-------------*/

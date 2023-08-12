@@ -104,6 +104,8 @@ h2{
    
 }
 
+/*How to play */
+
 .howto{
     font-size: 0.9rem;
     color: #00BFA6;
@@ -124,8 +126,8 @@ h2{
     margin-top:100px;
     padding: 5px;
     transform: translateX(0);
-    width: 250px;
-    height: 230px;
+    width: 260px;
+    height:250px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: rgba(178, 255, 229, 0.732);
@@ -134,11 +136,11 @@ h2{
     
 }
 
-/*How to play */
 
 
-.howto-instructions p {
-   
+
+.howto-instructions ul li {
+    list-style: inside;
     color:rgb(4, 4, 9) ;
     font-weight: bold;
     font-size: 0.7rem;
