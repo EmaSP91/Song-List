@@ -95,6 +95,7 @@ function showItem(){
 }}
 
 newGame.addEventListener('click', function(){
+  emptyList.style.display = "none";
   localStorage.clear();
   itemsList = [];
 });
