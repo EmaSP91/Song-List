@@ -56,7 +56,8 @@ body.classList.remove("dark");
 toggleSwitch.classList.remove("active");  
 music.src = "img/undraw_happy_music.png"
 question.src = "img/undraw_Faq.png" 
-title.textContent = "Agrega una canción"   
+title.textContent = "Agrega una canción" 
+random.textContent= "Canción Aleatoria"  
 green.forEach(element => {
   element.src ="img/green.png"
   
