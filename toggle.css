@@ -50,7 +50,15 @@ body.dark .toggle-box p{
     color: rgb(255, 255, 255);
 }
 
+.fa-music, .fa-film{
+  font-size: 1.5rem;
+  color:rgb(4, 4, 9) ;
+}
 
+.film,.movie{
+    width: 100px;
+    opacity: 0.7;
+}
 .toggle-box{
     display:flex;
     gap: 10px;

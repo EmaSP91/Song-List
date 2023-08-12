@@ -59,7 +59,7 @@ body{
 }
 
 .pink-music-background2{
-    right: 25%;
+    right: 55%;
     top:10%;
 }
 
@@ -245,6 +245,7 @@ h2{
 }
 
 @media (max-width: 610px){
+
        h2{
         display: none;
        }
@@ -252,9 +253,14 @@ h2{
        .green-music-background1, .green-music-background2, .green-music-background3,.pink-music-background1, .pink-music-background2, .pink-music-background3{
         width: 80px;
        }
+       .pink-music-background2{
+        right: 40%;
+    }
+    
 }
 
 @media (max-width: 467px){
+
    
     #form{
         width: 80%;
