@@ -27,46 +27,43 @@ body{
 
 /*Elementos del fondo*/
 
-.fondo{
+.background{
     z-index:-1;
 }
 
-.fondo-hoja1, .fondo-hoja2, .fondo-hoja3,.fondo-hoja4, .burbuja1, .burbuja2, .burbuja3{
+.green-music-background1, .green-music-background2, .green-music-background3,.pink-music-background1, .pink-music-background2, .pink-music-background3{
     position: absolute;
     width: 100px;
     
 
 }
 
-.fondo-hoja1{
-    top: 15px;
-}
 
-.fondo-hoja2{
+.green-music-background1{
     left: 20px;
 }
 
-.fondo-hoja3{
+.green-music-background2{
     left: 100px;
     bottom: 8px;
 }
 
-.fondo-hoja4{
+.green-music-background3{
     right: 10%;
 
 }
 
-.burbuja1{
+.pink-music-background1{
     left:25%;
 
 }
 
-.burbuja2{
+.pink-music-background2{
     right: 25%;
     top:10%;
 }
 
-.burbuja3{
+.pink-music-background3{
     bottom: 15%;
     right: 10%;
 }
@@ -136,7 +133,7 @@ h2{
     
 }
 
-/*Cómo jugar */
+/*How to play */
 
 
 .howto-instructions p {
@@ -149,10 +146,10 @@ h2{
 
 
 
-/*Formulario*/
+/*Form*/
 
 
-#song-form{
+#form{
     margin-top: 120px;
     background-color: rgb(178, 255, 229);
     border-radius: 10px;
@@ -176,10 +173,10 @@ h2{
 }
 
 
-#song:focus{
+#input:focus{
     outline:none;
 }
-#song, .add, .cancion-azar, .new-game{
+#input, .add, .random, .new-game{
     width: 60%;
     padding: 5px 10px;
     border-radius: 5px;
@@ -187,20 +184,20 @@ h2{
     font-size: 0.9rem;
 }
 
-.add, .cancion-azar, .new-game{
+.add, .random, .new-game{
     background-color: rgb(238, 60, 93);
     cursor: pointer;
 }
 
-.title, #song,.add,.cancion-azar, .new-game{
+.title, #input,.add,.random, .new-game{
     color: rgb(4, 4, 9);
 }
 
-#song-form #song, #song-form .title,#song-form .add, #song-form .cancion-azar, #song-form .new-game{
+#form #input, #form .title,#form .add, #form .random, #form .new-game{
     margin:10px;
 }
 
-.add:hover, .cancion-azar:hover, .new-game:hover{
+.add:hover, .random:hover, .new-game:hover{
     background-color: rgb(230, 25, 63);
     transition: .5s;
 }
@@ -228,8 +225,8 @@ h2{
         transition: 0.5s;
     }
     /*------*/
-    #song.form{
-        width: 90%;
+    #form{
+        width: 60%;
     }
 
     h2{
@@ -247,9 +244,28 @@ h2{
 
 }
 
+@media (max-width: 610px){
+       h2{
+        display: none;
+       }
+
+       .green-music-background1, .green-music-background2, .green-music-background3,.pink-music-background1, .pink-music-background2, .pink-music-background3{
+        width: 80px;
+       }
+}
+
+@media (max-width: 467px){
+   
+    #form{
+        width: 80%;
+    }
+    
+}
+
 @media (max-width: 375px){
-    h2{
-       display: none;
+
+    #form{
+        width: 90%;
     }
     
 }

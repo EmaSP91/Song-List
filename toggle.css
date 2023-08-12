@@ -21,15 +21,15 @@
     color: rgb(255, 255, 255);
   }
 
-  body.dark #song-form{
+  body.dark #form{
     background: #131225;
   }
 
-  body.dark .add, body.dark .cancion-azar, body.dark .new-game{
+  body.dark .add, body.dark .random, body.dark .new-game{
     background: #6C63FF;
   }
 
-  body.dark .add:hover, body.dark .cancion-azar:hover, body.dark .new-game:hover{
+  body.dark .add:hover, body.dark .random:hover, body.dark .new-game:hover{
     background-color: #564eee;
     transition: .5s;
 }
